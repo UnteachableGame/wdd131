@@ -1,0 +1,43 @@
+#main-container {
+    margin: 0 auto;
+    text-align: center;
+    align-self: center;
+    border: 1px solid black;
+    padding: 50px 100px;
+}
+
+h1 {
+    font-family: "cinzel", serif;
+    font-weight: bold;
+}
+h4 {
+    color: #035f9c;
+    height: 1px;
+    letter-spacing: 1.5px;
+}
+
+#main-byui {
+    font-family: Gotham, serif;
+}
+
+p {
+    line-height: 1.2;
+    font-family: Sabon, serif;
+}
+
+hr {
+    height: 1px;
+    width: 100%;
+}
+
+#left-container {
+    text-align: left;
+}
+
+#paragraph-italics {
+    font-style: italic;
+}
+
+img {
+    width: 10%;
+} 
