@@ -1,6 +1,9 @@
 // variables vs constants.
 // constants are variables that never change
 
+// constants = final var
+// variables = var
+
 // constant
 const PI = 3.14;
 
@@ -45,3 +48,13 @@ if (student == null) {
 }
 console.log(course); // works fine, course is global
 console.log(student); // does not work, can't access a block variable outside the block
+
+const element1 = document.querySelector("#newInputValue");
+const element2 = document.querySelectorAll(".newInputClass");
+const element3 = document.getElementById("myElementId");
+const element4 = document.getElementsByClassName("classElementName");
+const element5 = document.getElementsByTagName("p");
+
+element1.style.color = "blue";
+element1.style.backgroundColor = "yellow";
+element1.style.fontSize = "20px";
