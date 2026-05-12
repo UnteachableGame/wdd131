@@ -21,10 +21,21 @@ section {
     margin: 1em;
     border: 1px solid #ccc;
 }
+section {
+    padding: 20px;
+    color: black;
+    display: block;
+}
+.hide {
+    display: none;
+}
 nav a {
     padding: 20px;
     color: black;
     display: none;
+    text-decoration: none;
+    text-align: center;
+    border-top: 1px solid gray;
 }
 nav a:hover {
     text-decoration: none;
@@ -40,7 +51,20 @@ nav a:hover {
     height: 4px;
     background-color: black;
     margin: 5px 0;
+    transition: .4s; /* This gives delay*/
 }
+
+/*Animation for the menu bar*/
+.change .bar1 {
+    transform: translate(0, 9.5px) rotate(-45deg);
+}
+.change .bar2 {
+    opacity: 0;
+}
+.change .bar3 {
+    transform: translate(0, -9.5px) rotate(45deg);
+}
+
 footer {
     text-align: center;
 }
@@ -56,9 +80,13 @@ footer {
     }
     nav a {
         display: inline;
+        border: none;
     }
     nav {
-        text-align: right;
+        text-align: center;
+    }
+    .hide {
+        display: inline-block;
     }
 }
 
