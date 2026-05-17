@@ -5,7 +5,6 @@
 }
 
 /*Font - not needed to match*/
-
 header {
     background-color: dodgerblue;
     color: white;
@@ -13,28 +12,22 @@ header {
     text-align: center;
     padding: 2px;
 }
-
 header h1 {
     padding: 10px;
 }
-
 nav {
     padding: 5px;
 }
-
 nav h2 {
     padding: 5px;
 }
-
 nav ul {
     display: none;
 }
-
 main {
     background-color: lightgray;
     padding: 5px;
 }
-
 main h2 {
     text-align: center;
     font-family: Inter, serif;
@@ -48,7 +41,6 @@ main h2 {
     max-width: 1200px;
     margin: 0 auto;
 }
-
 #images img {
     border: 6px solid white;
     box-shadow: 10px 10px 5px gray;
@@ -57,12 +49,29 @@ main h2 {
     object-fit: cover;
 }
 
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
 footer {
     background-color: dodgerblue;
     padding: 3px;
     align-content: center;
 }
-
 footer p {
     color: white;
     font-family: Inter, serif;
