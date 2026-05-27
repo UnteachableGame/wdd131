@@ -26,3 +26,11 @@ student.forEach(function (item) {
     `;
     container.appendChild(name);
 });
+
+const pets = ["cat", "dog", "bird"]; // Literal array
+const animals = new Array("pig", "goat", "sheep"); // Constructor array
+
+pets.push("lizard"); // This appends lizard to the array.
+pets.unshift("beginning"); // This appends an element to the beginning of the array.
+pets.pop(); // This removes last element.
+pets.shift(); // This removes the first element.
