@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event</title>
+	<link rel="stylesheet" href="event.css">
+	<script src="event.js" defer></script>
+</head>
+<body>
+	<main>
+		<div id="main-container">
+			<h1>Event Ticket</h1>
+			<form action="/ticket" method="post" id="form-container">
+				<label for="fname2" id="fname1">First Name:</label><br>
+				<input type="text" id="fname2" name="fname"><br>
+				<label for="lname2" id="lname1">Last Name:</label><br>
+				<input type="text" id="lname2" name="lname"><br>
+				<label for="email2" id="email1">Email:</label><br>
+				<input type="email" id="email2" name="email"><br>
+				<label for="type2" id="type1">Type:</label><br>
+				<select name="type" id="type2">
+					<option value="chooseOne">Choose one</option>
+				</select><br>
+				<label for="date2" id="date1">Event Date:</label><br>
+				<input type="date" id="date2" name="date"><br>
+				<input type="submit" id="submit" value="Create Ticket">
+			</form>
+		</div>
+	</main>
+</body>
+</html>
