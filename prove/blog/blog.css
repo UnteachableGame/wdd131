@@ -34,12 +34,18 @@ header nav ul li a {
     font-size: 18px;
 }
 
-.book-container {
+.book-container #sub1 {
     display: grid;
     grid-template-columns: 6fr 175px;
-    grid-template-rows: 30px 30px 30px 30px 30px 1fr 2fr 1fr;
+    grid-template-rows: 30px 30px 30px 30px 30px;
     margin-top: 15px;
     margin-left: 5px;
+}
+
+.book-container #sub2 {
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    grid-template-rows: 1fr 4fr 1fr;
 }
 
 .book-container hr {
@@ -48,57 +54,58 @@ header nav ul li a {
     align-self: center;
 }
 
-.book-container #date {
+.book-container #sub1 #date {
     grid-column: 2/3;
     grid-row: 2/3;
     align-self: center;
     text-align: right;
     padding-right: 30px;
 }
-.book-container #age {
+.book-container #sub1 #age {
     grid-column: 2/3;
     grid-row: 3/4;
     align-self: center;
     text-align: right;
     padding-right: 30px;
 }
-.book-container #genre {
+.book-container #sub1 #genre {
     grid-column: 2/3;
     grid-row: 4/5;
     align-self: center;
     text-align: right;
     padding-right: 30px;
 }
-.book-container #stars {
+.book-container #sub1 #stars {
     grid-column: 2/3;
     grid-row: 5/6;
     align-self: center;
     text-align: right;
     padding-right: 30px;
 }
-.book-container #title {
+.book-container #sub2 #title {
     grid-column: 1/2;
-    grid-row: 6/7;
+    grid-row: 1/2;
     align-self: center;
     padding-left: 30px;
     font-size: 25px;
 }
-.book-container #image {
+.book-container #sub2 #image {
     grid-column: 1/2;
-    grid-row: 7/8;
+    grid-row: 2/3;
     justify-self: center;
     align-self: center;
     width: 150px;
-    padding: -5px 0 -5px 0;
+    /*padding: -5px 5px -5px 5px;*/
+    padding: 10px;
 }
-.book-container #desc {
+.book-container #sub2 #desc {
     grid-column: 1/2;
-    grid-row: 8/9;
+    grid-row: 3/4;
     align-self: center;
     text-align: left;
     padding: 10px 0 10px 30px;
  }
-.book-container h2 {
+.book-container #sub2 h2 {
     font-family: Inter, serif;
     color: #CC0000;
     font-size: 27px;
@@ -114,6 +121,8 @@ footer p {
     margin: 0;
 }
 
-@media screen {
+@media screen and (min-width: 700px) {
+    .book-container #sub1 {
 
+    }
 }

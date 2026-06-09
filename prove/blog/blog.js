@@ -49,14 +49,18 @@ articles.forEach(function (item ) {
     book.className = "book-container";
 
     book.innerHTML = `
-        <hr>
-        <p id="date">${item.date}</p>
-        <p id="age">${item.ages}</p>
-        <p id="genre">${item.genre}</p>
-        <p id="stars">${item.stars}</p>
-        <h2 id="title">${item.title}</h2>
-        <img id="image" src="${item.imgSrc}" alt="${item.imgAlt}">
-        <p id="desc">${item.description}</p>
+        <div id="sub1">
+            <hr>
+            <p id="date">${item.date}</p>
+            <p id="age">${item.ages}</p>
+            <p id="genre">${item.genre}</p>
+            <p id="stars">${item.stars}</p>
+        </div>
+        <div id="sub2">
+            <h2 id="title">${item.title}</h2>
+            <img id="image" src="${item.imgSrc}" alt="${item.imgAlt}">
+            <p id="desc">${item.description}</p>
+        </div>
     `;
     booksContainer.appendChild(book)
 });

@@ -32,7 +32,6 @@ section {
 nav a {
     padding: 20px;
     color: black;
-    display: none;
     text-decoration: none;
     text-align: center;
     border-top: 1px solid gray;
