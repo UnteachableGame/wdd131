@@ -32,8 +32,12 @@ function sectionTemplate(section) {
 // console.log(aCourse.code); // This is a property defined in the previous array.
 // aCourse.code = "WDD131"; // You can define variables this like.
 //
-// document.querySelector("#courseName").textContent = aCourse.name;
-// document.querySelector("#courseCode").textContent = aCourse.code;
+document.querySelector("#courseName").textContent = aCourse.name;
+document.querySelector("#courseCode").textContent = aCourse.code;
+
+document.querySelector("img").src = aCourse.logo;
+document.querySelector("img").setAttribute("alt", aCourse.name);
+document.querySelector("img").style.width = "100px";
 //
 // console.log(aCourse.sections[1].instructor);
 //
@@ -54,6 +58,6 @@ renderSections(aCourse.sections);
 document.querySelector("#enrollForm").addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const sectionNum = document.querySelector("#sectionNumber").value;
+    const sectionNum = parseInt(document.querySelector("#sectionNumber").value);
     aCourse.enrollStudent(sectionNum);
 });
