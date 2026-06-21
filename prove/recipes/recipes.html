@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Open Graph (Facebook, LinkedIn, etc.) -->
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Your Title">
+	<meta property="og:description" content="Your Description">
+	<meta property="og:url" content="Your URL">
+	<meta property="og:image" content="social-preview-image.png">
+
+	<!-- X Card -->
+	<meta name="twitter:card" content="Social Preview Image">
+	<meta name="twitter:title" content="Your Title">
+	<meta name="twitter:description" content="Your Description">
+	<meta name="twitter:image" content="social-preview-image.png">
+
+	<!-- One favicon (ICO works everywhere) -->
+	<link rel="icon" href="/favicon.ico">
+
+	<!-- One Apple Touch Icon (iOS home screen) -->
+	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+	<title>Recipes</title>
+	<link rel="stylesheet" href="recipes.css">
+	<script src="recipes.js" defer></script>
+</head>
+<body>
+	<header>
+		<div class="title-logo-container">
+			<img src="images/recipe-book.png" alt="cookbook" aria-label="A cookbook logo">
+			<h1>Recipe Book</h1>
+		</div>
+		<search class="search-container">
+			<form action="/search" method="get" class="search-form">
+				<input type="search" class="search-input" aria-label="Search recipes" placeholder="Find a recipe">
+				<button type="submit" class="search-submit" aria-label="Search submit">
+					<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="11" cy="11" r="8"></circle>
+						<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+					</svg>
+				</button>
+			</form>
+		</search>
+		<hr id="line-design">
+	</header>
+	<main>
+		<section class="recipes-container"></section>
+	</main>
+	<footer>
+		<div class="social">
+			<!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+			<a href="#"><img src="images/instagram_icon.svg" alt="Instagram icon"></a>
+			<a href="#"><img src="images/youtube_icon.svg" alt="YouTube icon"></a>
+			<a href="#"><img src="images/pinterest_icon.svg" alt="Pinterest icon"></a>
+		</div>
+		<a class="source-container" href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+	</footer>
+</body>
+</html>
