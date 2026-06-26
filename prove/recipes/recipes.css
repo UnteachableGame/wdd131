@@ -19,7 +19,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    margin: 20px;
+    margin: 35px;
     gap: 5px;
 }
 
@@ -39,7 +39,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    width: 100%;
+    width: auto;
     max-width: 600px;
     border: 3px solid black;
     border-radius: 10px;
@@ -48,8 +48,25 @@
     margin: 10px;
 }
 
-.search-container form input {
+.search-input {
+    width: 100%;
+    padding: 5px;
+    border: 0 solid black;
+    font-size: 15px;
+    /*border-right: 2px solid grey;*/
+}
 
+.search-submit {
+    background-color: white;
+    border: 0 solid black;
+    width: 45px;
+    height: auto;
+    padding: 1px;
+
+    background-image: linear-gradient(to bottom, #ccc, #ccc);
+    background-size: 2px calc(100% - 5px); /* 1px wide, shrinks height by 12px total */
+    background-position: left center; /* Places it exactly where the left border was */
+    background-repeat: no-repeat;
 }
 
 header hr {
@@ -63,28 +80,56 @@ header hr {
 }
 
 .recipe-container {
+    display: flex;
+    flex-flow: column wrap;
     border: 3px solid black;
     border-radius: 10px;
-    padding: 15px;
+    padding: 20px;
     margin: 5px 10px;
+    width: auto;
+    max-width: 600px;
 }
 
 .recipe-container img {
-    height: 350px;
+    height: 275px;
     width: auto;
 }
 
 .recipe-container button {
     font-weight: bold;
-    padding: 5px;
+    padding: 3px;
     font-size: 20px;
-    margin-bottom: 30px;
+    margin: 2px 0 30px 0;
+    width: max-content;
+    border: 2px solid lightgray;
+    border-radius: 2px;
 }
 
 .recipe-container h4 {
     font-family: AmaticSC-Regular, serif;
     font-size: 35px;
     color: dodgerblue;
+}
+
+.rating {
+    display: flex;
+    flex-flow: row nowrap;
+    padding-left: 0;
+}
+
+.icon-star {
+    font-size: 20px;
+    align-content: center;
+    padding: 0;
+}
+
+.icon-star-empty {
+    font-size: 27px;
+    margin-left: 2px;
+}
+
+.recipe-container p {
+    display: none;
 }
 
 /*---- Footer ----*/
@@ -106,4 +151,67 @@ header hr {
     align-content: center;
     text-align: center;
     margin: 10px;
+}
+
+@media screen and (min-width: 500px){
+    /*--- Header ---*/
+    .search-container form {
+        max-width: 1500px;
+    }
+
+    .search-input {
+        font-size: 17px;
+    }
+
+    /*--- Main ---*/
+    .recipe-container {
+        display: grid;
+        grid-template-columns: max-content auto;
+        grid-template-rows: max-content max-content max-content 1fr;
+        max-width: 1500px;
+        height: max-content;
+    }
+
+    .recipe-container img {
+        grid-row: 1/5;
+        width: max-content;
+        height: 300px;
+        justify-self: left;
+    }
+
+    .recipe-container button {
+        grid-row: 1/2;
+        margin-left: 30px;
+        height: 35px;
+        margin-bottom: 40px;
+    }
+
+    .recipe-container h4 {
+        grid-row: 2/3;
+        margin: 1px 30px;
+    }
+
+    .rating {
+        grid-row: 3/4;
+        margin-left: 25.5px;
+    }
+
+    .recipe-container p {
+        grid-row: 4/5;
+        display: block;
+        margin: 15px 30px;
+    }
+
+    /*--- Footer ---*/
+    footer {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        justify-content: space-between;
+        margin-left: 2px;
+        margin-right: -7px;
+    }
+
+    footer a {
+        align-self: start;
+    }
 }
