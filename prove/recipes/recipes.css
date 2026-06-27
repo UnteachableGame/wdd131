@@ -71,10 +71,12 @@
 
 .search-submit:hover {
     background-color: lightgray;
+    color: dimgrey;
 }
 
 .search-submit:active {
     background-color: white;
+    color: dimgrey;
 }
 
 header hr {
@@ -127,6 +129,7 @@ header hr {
 
 .tag-submit:active {
     background-color: ButtonFace;
+    color: ButtonText;
 }
 
 .recipe-container h4 {
