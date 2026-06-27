@@ -62,7 +62,9 @@
     width: 45px;
     height: auto;
     padding: 1px;
+    color: black;
 
+    /*This is the vertical line*/
     background-image: linear-gradient(to bottom, #ccc, #ccc);
     background-size: 2px calc(100% - 5px); /* 1px wide, shrinks height by 12px total */
     background-position: left center; /* Places it exactly where the left border was */
