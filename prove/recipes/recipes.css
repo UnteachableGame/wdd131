@@ -71,12 +71,12 @@
 
 .search-submit:hover {
     background-color: lightgray;
-    color: black;
+    stroke: black;
 }
 
 .search-submit:active {
     background-color: white;
-    color: black;
+    stroke: black;
 }
 
 header hr {
