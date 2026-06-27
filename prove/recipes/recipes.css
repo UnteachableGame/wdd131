@@ -69,6 +69,14 @@
     background-repeat: no-repeat;
 }
 
+.search-submit:hover {
+    background-color: lightgray;
+}
+
+.search-submit:active {
+    background-color: white;
+}
+
 header hr {
     margin: 15px 4px 10px;
 }
@@ -91,18 +99,34 @@ header hr {
 }
 
 .recipe-container img {
-    height: 275px;
-    width: auto;
+    height: auto;
+    max-height: 275px;
+    width: 100%;
+    max-width: max-content;
 }
 
-.recipe-container button {
-    font-weight: bold;
+.tag-submit-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 2px 0 0 -4px;
     padding: 3px;
+}
+
+.tag-submit {
+    font-weight: bold;
     font-size: 20px;
-    margin: 2px 0 30px 0;
     width: max-content;
     border: 2px solid lightgray;
     border-radius: 2px;
+    margin: 0 1px;
+}
+
+.tag-submit:hover {
+    background-color: lightgray;
+}
+
+.tag-submit:active {
+    background-color: ButtonFace;
 }
 
 .recipe-container h4 {
@@ -118,7 +142,7 @@ header hr {
 }
 
 .icon-star {
-    font-size: 20px;
+    font-size: 27px;
     align-content: center;
     padding: 0;
 }
@@ -179,16 +203,20 @@ header hr {
         justify-self: left;
     }
 
-    .recipe-container button {
+    .tag-submit-container {
+        margin-left: 25px;
+    }
+
+    .tag-submit {
         grid-row: 1/2;
-        margin-left: 30px;
+        /*margin-left: 30px;*/
         height: 35px;
-        margin-bottom: 40px;
+        margin-bottom: 1px;
     }
 
     .recipe-container h4 {
         grid-row: 2/3;
-        margin: 1px 30px;
+        margin: 40px 30px 1px;
     }
 
     .rating {

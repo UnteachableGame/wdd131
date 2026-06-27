@@ -72,8 +72,8 @@ const hikes = [
 ];
 
 let hikeContainer = document.querySelector("#hike-container");
-let button = document.querySelector("#search-term");
 let input = document.querySelector("#search");
+let button = document.querySelector("#search-term");
 
 button.addEventListener("click", search);
 
@@ -88,8 +88,6 @@ function search() {
         );
     });
 
-    console.log(filterHikes);
-
     let sortedHikes = filterHikes.sort(compareHikes);
 
     function compareHikes(a,b) {
@@ -101,16 +99,10 @@ function search() {
         return 0;
     }
 
-    console.log(sortedHikes);
-
     // clear out any previous content
     hikeContainer.innerHTML = '';
     // output onto screen
     sortedHikes.forEach(function(hike){
-        renderHike(hike);
-    })
-
-    sortedHikes.forEach(function (hike) {
         renderHike(hike);
     });
 }

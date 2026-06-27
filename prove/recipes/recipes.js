@@ -281,23 +281,86 @@ const recipes = [
 ];
 
 let recipesContainer = document.querySelector(".recipes-container");
+let input = document.querySelector(".search-input");
+let submitButton = document.querySelector(".search-submit");
 
-recipes.forEach(function (recipeItem) {
-    let recipe = document.createElement("div");
+submitButton.addEventListener("click", function (submit) {
+    submit.preventDefault();
 
-    recipe.className = "recipe-container";
-    recipe.innerHTML = `
-        <img src=${recipeItem.image} alt=${recipeItem.imgAlt}>
-        <button type="submit">dessert</button>
-        <h4>${recipeItem.name}</h4>
-        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star">⭐</span>
-            <span aria-hidden="true" class="icon-star-empty">☆</span>
-        </span>
-        <p>${recipeItem.description}</p>
-    `;
-    recipesContainer.appendChild(recipe);
+    let inputValue = input.value;
+    let filterRecipes = recipes.filter(function (recipe) {
+        return (
+            recipe.name.toLowerCase().includes(inputValue.toLowerCase()) ||
+            recipe.description.toLowerCase().includes(inputValue.toLowerCase()) ||
+            recipe.tags.find(tag => tag.toLowerCase().includes(inputValue.toLowerCase()))
+        );
+    });
+
+    let sortedRecipes = filterRecipes.sort(compareRecipes);
+
+    function compareRecipes(a,b) {
+        if (a.rating > b.rating) {
+            return -1;
+        } else if (a.rating < b.rating) {
+            return 1;
+        }
+        return 0;
+    }
+
+    recipesContainer.innerHTML = "";
+
+    sortedRecipes.forEach(function (recipeItem) {
+        let recipe = document.createElement("div");
+        recipe.className = "recipe-container";
+
+        recipe.innerHTML = `
+            <img src=${recipeItem.image} alt=${recipeItem.imgAlt}>
+            <div class="tag-submit-container">${tagTemplate(recipeItem.tags)}</div>
+            <h4>${recipeItem.name}</h4>
+            <span class="rating" role="img" aria-label="Rating: ${recipeItem.rating} out of 5 stars">
+                ${ratingTemplate(recipeItem.rating)}
+            </span>
+            <p>${recipeItem.description}</p>
+        `;
+
+        recipesContainer.appendChild(recipe);
+    });
 });
+
+function tagTemplate(tags) {
+    return tags.map((tag)=> `<button class="tag-submit" type="submit">${tag}</button>`).join(' ');
+}
+
+function ratingTemplate(ratingNum) {
+    let starString = ``;
+    let halfNum = ratingNum % 1;
+
+    for (let i = 1; i <= ratingNum; i++) {
+        starString += starTemplate();
+    }
+    if (halfNum > 0 && halfNum < 1) {
+        starString += starHalfFullTemplate();
+
+        for (let i = ratingNum + halfNum + 1; i <= 5; i++) {
+            starString += starEmptyTemplate();
+        }
+    } else {
+        for (let i = ratingNum + 1; i <= 5; i++) {
+            starString += starEmptyTemplate();
+        }
+    }
+    return starString;
+}
+
+function starTemplate() {
+    // ⭐
+    return `<span aria-hidden="true" class="icon-star">★</span>`;
+}
+
+function starHalfFullTemplate() {
+    return `<span aria-hidden="true" class="icon-star-empty">⯪</span>`;
+}
+
+function starEmptyTemplate() {
+    return `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
+}
