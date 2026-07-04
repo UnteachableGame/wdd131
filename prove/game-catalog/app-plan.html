@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8"/>
+	<title>Site Plan</title>
+	<link type="text/css" rel="stylesheet" href="site-plan.css"/>
+</head>
+<body>
+<header>
+	<h1>[Project name] Project Plan</h1>
+	<h2>FirstName LastName</h2>
+	<h2>WDD 131</h2>
+	<!-- In the header above, add the name or your site, your name and class number. For example if you are in section 3 you would put WDD 131.03 -->
+</header>
+<main>
+	<hr/>
+	<h2>Overview</h2>
+	<h3>Purpose</h3>
+	<p>To create a plan for users to find their favorite games to play and view information about.</p>
+	<!-- change this -->
+
+	<h3>Audience</h3>
+	<p>My audience will contain those who are interested in video games and knowing information about them.</p>
+	<!-- change this -->
+
+	<h3>Dynamic elements</h3>
+	<p>This project will contain a search filter, a random game generator, and a modal of each game containing more information about it.</p>
+	<!-- change this -->
+
+	<hr/>
+	<h2>Branding</h2>
+	<h3>Website Logo</h3>
+	<!-- Replace this with some sort of logo for your site.  A logo can be as simple as the name of your site in a nice font :) -->
+	<img src="images/logo-512.png" alt="Logo image"/>
+	<hr/>
+	<h2>Style Guide</h2>
+
+	<h3>Color Palette</h3>
+	<!--  The colors you choose for a website are one of the most important decisions you will make. Follow the instructions on the activity in iLearn then return and replace the color codes below with the hex color codes (the 6 digit numbers that show at the bottom of each color) for the colors you have chosen below.  You should have at least 2 colors but do not have to fill in all 4 if you do not need them.  -->
+
+	<!-- Copy and paste the URL to your finished palette below Make sure to paste it into both spots -->
+	Palette URL:
+	<a href="https://coolors.co/838993-6c93c6-4a73b5-e9edf2" target="_blank">Color Palette colors</a>
+
+	<table class="colors">
+		<tbody>
+		<tr>
+			<th>Primary</th>
+			<th>Secondary</th>
+			<th>Accent 1</th>
+			<th>Accent 2</th>
+		</tr>
+		<!-- Replace the numbers in the boxes below with your hex color codes. Then switch to the site-plan.css file and change your colors there as well. -->
+		<tr>
+			<td class="primary">[#838993]</td>
+			<td class="secondary">[#6c93c6]</td>
+			<td class="accent1">[#4a73b5]</td>
+			<td class="accent2">[#e9edf2]</td>
+		</tr>
+		</tbody>
+	</table>
+
+
+	<h3>Pseudocode for your project</h3>
+
+	<p>
+		To implement your project, I will start by defining my game data as an array of objects, where each object contains
+		properties such as the title, platform, score, image URL, and a detailed description. I will create a renderGames
+		function that selects your main display container, clears its current content, and uses the .map() array method to
+		dynamically generate and inject HTML cards for each game in your array.
+		<br><br>
+		For my interactivity requirements, each game card will have an event listener attached to it that, when clicked,
+		triggers an openModal function. This openModal function will select the modal element in your DOM, modify its inner
+		HTML to display the specific details of the selected game object—including an additional image and expanded information—and
+		then remove a "hidden" class to make the modal visible to the user.
+		<br><br>
+		I will also implement a filterGames function that utilizes the .filter() method to create a new array based on the
+		user's selected platform and then calls the renderGames function to update the displayed list. Finally, I will
+		incorporate conditional branching with if statements throughout your code, such as displaying a "Must Play" badge
+		if a game's score exceeds a certain threshold, and you will ensure your project remains mobile-first and performant
+		to meet your Lighthouse accessibility and performance criteria.
+	</p>
+
+	<h2>Wireframes</h2>
+	<h3>Dashboard</h3>
+	<p>
+		Header Section:
+
+		Place the "Gaming Backlog Dashboard" logo in the top-left.
+
+		Include a simple navigation menu or filter buttons (e.g., "All," "PC," "Console") to the right or below the logo.
+
+		Main Content Area (The Grid):
+
+		Use a responsive CSS Grid or Flexbox container.
+
+		Game Cards: Each card contains a small representative image (required for the rubric), the game title, and a "View Details" button.
+
+		On mobile, these cards stack vertically.
+
+		On tablet/desktop, these cards align in 2 to 4 columns.
+
+		Interaction:
+
+		The "View Details" button on each card will trigger the JS event listener to open the Modal.
+	</p>
+
+	<h3>Game Details View (Modal)</h3>
+	<p>
+		This view is a "floating" layer over your existing dashboard. It provides the expanded information without needing a second HTML page.
+
+		Overlay: A semi-transparent background that covers the entire viewport to focus the user's attention on the game content.
+
+		The Modal Box:
+
+		Close Button: An 'X' or "Close" button placed in the top-right corner to allow the user to exit the view.
+
+		Image Section: A large, secondary, high-resolution image of the game (fulfilling the "additional picture" requirement).
+
+		Info Section:
+
+		Title: Large, bold heading.
+
+		Dynamic Metadata: A section for the description, platform, and playtime.
+
+		Conditional Badge: An area that displays a "Must Play" badge only if the game score is above 85 (satisfying the conditional branching requirement).
+	</p>
+	<img src="images/potential-game-catalog-wireframe.webp" alt="home page wireframe"/>
+</main>
+</body>
+</html>
