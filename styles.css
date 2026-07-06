@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body h1 {
+    justify-self: center;
+    margin: 15px 0 5px   0;
+}
+
+.section-container {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.main-container {
+    border: black solid 3px;
+    border-radius: 10px;
+    margin: 10px 0 10px 15px;
+    padding: 10px;
+    width: max-content;
+}
+
+.week-containers {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.ponder-container {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+}
+
+.prove-container {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.main-elements-container {
+    margin-bottom: 5px;
+}
+
+.main-elements-container a {
+    text-decoration: none;
+    background-color: #b30059;
+    color: white;
+    border-radius: 20px;
+    padding: 7px;
+    margin: 10px 0 5px 0;
+    width: max-content;
+}
+
+.main-elements-container a:hover {
+    background-color: #990000;
+}
+
+.main-elements-container ul li {
+    color: black;
+}
+
+.checklist {
+    list-style: none;
+}
+
+.checklist li::before {
+    content: "✔";
+    color: green;
+    display: inline-block;
+    width: 1.5em; /* Controls spacing between the check and text */
+}
+
+.incomplete-list {
+    list-style: none;
+}
+
+.incomplete-list li::before {
+    content: "✖";
+    color: red;
+    display: inline-block;
+    width: 1.5em; /* Controls spacing between the check and text */
+}
+
+.main-elements-container br {
+    display: none;
+}
+
+.main-elements-container ul {
+    margin: 0 10px 10px 10px;
+}
+
+.main-elements-container ul li {
+    margin-left: 40px;
+}
+
+#ponder-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}

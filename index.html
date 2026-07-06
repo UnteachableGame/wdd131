@@ -3,17 +3,72 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
 	<title>Home | Portal Page</title>
 </head>
 <body>
 	<h1>WDD131 Portal Page</h1>
-	<h2>Ponders</h2>
-	<a href="ponder/dom/dom.html">Week 1 Ponder - Meta Tags</a><br>
-	<a href="ponder/dom/dom.html">Week 2 Ponder - DOM</a><br>
-	<a href="ponder/theme/dom-theme.html">Week 2 Ponder - DOM Themes</a><br>
-	<a href="ponder/responsive/responsive.html">Week 3 Ponder - Responsive</a><br>
-	<h2>Proves</h2>
-	<a href="prove/mission/index.html">Mission Statement</a><br>
-	<a href="prove/coolpics/coolpics.html">Cool Pictures</a><br>
+	<div class="section-container">
+		<section class="main-container">
+			<h2>Ponders</h2>
+			<div class="week-containers ponder-container">
+				<h3>Week 1 Ponder</h3>
+				<div class="main-elements-container">
+					<a href="ponder/dom/dom.html">Meta Tags</a><br>
+				</div>
+				<hr>
+				<h3>Week 2 Ponder</h3>
+				<div class="main-elements-container">
+					<a href="ponder/dom/dom.html">DOM</a><br>
+					<a href="ponder/theme/dom-theme.html">DOM Themes</a><br>
+				</div>
+				<hr>
+				<h3>Week 3 Ponder</h3>
+				<div class="main-elements-container">
+					<a href="ponder/responsive/responsive.html">Responsive</a><br>
+				</div>
+			</div>
+		</section>
+		<section class="main-container">
+			<h2>Proves</h2>
+			<div class="main-elements-container prove-container">
+				<a href="prove/mission/mission.html">Mission Statement</a><br>
+				<ul class="checklist">
+					<li><strong>Part 1 | HTML & CSS:</strong> Basic HTML and CSS structure and design from WDD 130.</li>
+					<li><strong>Part 2 | JavaScript:</strong> Basic JS programming w/ DOM fundamentals and a dropdown (Light/Dark) menu.</li>
+				</ul>
+				<hr>
+				<a href="prove/coolpics/coolpics.html">Cool Pictures</a><br>
+				<ul class="incomplete-list">
+					<li><strong>Part 1 | HTML & CSS:</strong> Responsive menu in CSS using Media Queries.</li>
+					<li><strong>Part 2 | JavaScript:</strong> Modal mobile menu via clicking an image.</li>
+				</ul>
+				<hr>
+				<a href="prove/blog/blog.html">Blog</a><br>
+				<ul class="incomplete-list">
+					<li><strong>Part 1 | HTML & CSS:</strong> Using CSS to make a Grid Box and add page Accessibility.</li>
+					<li><strong>Part 2 | JavaScript:</strong> Using Array Methods to make a page have Dynamic Content.</li>
+				</ul>
+				<hr>
+				<a href="prove/eventform/eventform.html">Event Ticket</a><br>
+				<ul class="incomplete-list">
+					<li><strong>HTML, CSS & JavaScript:</strong> HTML Forms w/ dropdowns, edge cases (error messages), a submission button, and adding a Favicon logo.</li>
+				</ul>
+				<hr>
+				<a href="prove/charactercard/charactercard.html">Character Card</a><br>
+				<ul class="incomplete-list">
+					<li><strong>HTML, CSS & JavaScript:</strong> Social media Meta Tags and Array Methods for Dynamic Content.</li>
+				</ul>
+				<hr>
+				<a href="prove/recipes/recipes.html">Recipe Book</a><br>
+				<ul class="checklist">
+					<li><strong>Part 1 | HTML & CSS:</strong> Flex box layout w/ a Search Bar form.</li>
+				</ul>
+				<hr>
+				<h3>Final Project</h3>
+				<a href="prove/game-catalog/app-plan.html">App Plan</a><br>
+			</div>
+		</section>
+	</div>
 </body>
 </html>
