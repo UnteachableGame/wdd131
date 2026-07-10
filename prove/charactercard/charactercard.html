@@ -4,10 +4,26 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Character Card</title>
+	<link rel="stylesheet" href="charactercard.css">
+	<script src="charactercard.js" defer></script>
 </head>
 <body>
 	<main>
-		<section class="cards-container"></section>
+		<section class="cards-container">
+			<section class="card">
+				<img class="image" src="images/snortleblat.webp" alt="Snortleblat">
+				<h2 class="name">Snortleblat</h2>
+				<div class="stats">
+					<p><strong>Class: </strong><span id="class">Swamp Beast Diplomat</span></p>
+					<p><strong>Level: </strong><span id="level">7</span></p>
+					<p><strong>Health: </strong><span id="health">40</span></p>
+				</div>
+				<div class="buttons">
+					<button id="attacked" type="submit">Attacked</button>
+					<button id="levelUp" type="submit">Level Up</button>
+				</div>
+			</section>
+		</section>
 	</main>
 </body>
 </html>
