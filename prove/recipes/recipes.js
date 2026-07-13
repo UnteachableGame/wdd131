@@ -284,6 +284,26 @@ let recipesContainer = document.querySelector(".recipes-container");
 let input = document.querySelector(".search-input");
 let submitButton = document.querySelector(".search-submit");
 
+document.addEventListener("DOMContentLoaded", () => {
+    const ranIndex = Math.floor(Math.random() * recipes.length);
+    const ranRecipe = recipes[ranIndex];
+
+    let recipe = document.createElement("div");
+    recipe.className = "recipe-container";
+
+    recipe.innerHTML = `
+            <img src=${ranRecipe.image} alt=${ranRecipe.imgAlt}>
+            <div class="tag-submit-container">${tagTemplate(ranRecipe.tags)}</div>
+            <h4>${ranRecipe.name}</h4>
+            <span class="rating" role="img" aria-label="Rating: ${ranRecipe.rating} out of 5 stars">
+                ${ratingTemplate(ranRecipe.rating)}
+            </span>
+            <p>${ranRecipe.description}</p>
+        `;
+
+    recipesContainer.appendChild(recipe);
+});
+
 submitButton.addEventListener("click", function (submit) {
     submit.preventDefault();
 
