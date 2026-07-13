@@ -55,7 +55,7 @@ articles.forEach(function (item ) {
             <p class="genre">${item.genre}</p>
             <p class="stars">${item.stars}</p>
         </div>
-        <hr class="vertical-line">
+        <div class="vertical-line"></div>
         <div class="sub2">
             <h2 class="title">${item.title}</h2>
             <img class="image" src="${item.imgSrc}" alt="${item.imgAlt}">

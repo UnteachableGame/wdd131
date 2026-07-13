@@ -162,12 +162,12 @@ footer p {
         padding: 0 200px;
     }
 
-    hr.vertical-line {
+    .vertical-line {
         display: flex;
         flex-flow: column nowrap;
-        height: 450px;
         border: 2px solid gold;
         margin: 0 10px;
+        align-self: stretch;
     }
 
     .book-container .sub1 {
