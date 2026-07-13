@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+/*----- Header Section -----*/
+
 /*Font - not needed to match*/
 header {
     background-color: dodgerblue;
@@ -19,11 +21,23 @@ nav {
     padding: 5px;
 }
 nav h2 {
+    cursor: pointer;
     padding: 5px;
 }
-nav ul {
+.hide {
     display: none;
 }
+
+nav ul li {
+    margin: 13px 0 13px 0;
+}
+
+nav ul li a {
+    color: white;
+}
+
+/*----- Main Section -----*/
+
 main {
     background-color: lightgray;
     padding: 5px;
@@ -47,6 +61,7 @@ main h2 {
     width: 300px;
     margin: 10px;
     object-fit: cover;
+    cursor: pointer;
 }
 
 dialog img {
@@ -60,12 +75,15 @@ dialog {
     background-color: rgba(0,0,0,.75);
 }
 .close-viewer {
+    cursor: pointer;
     position: absolute;
     top: 10vh;
     right: 2vh;
     padding: 3px 6px;
     font-size: 1.5em;
 }
+
+/*----- Footer Section -----*/
 
 footer {
     background-color: dodgerblue;
