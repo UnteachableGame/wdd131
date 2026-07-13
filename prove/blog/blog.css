@@ -170,6 +170,10 @@ footer p {
         margin: 0 10px;
     }
 
+    .book-container .sub1 {
+        padding: 0;
+    }
+
     .book-container .sub2 .image {
         width: 200px;
         height: auto;
