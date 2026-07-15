@@ -42,14 +42,37 @@ ponders = [
             title: "Movies pt.2"
         }
     ], [
-
+        {
+            link: "ponder/form/form.html",
+            title: "Form"
+        }
+    ], [
+        {
+            link: "ponder/courses/courses.html",
+            title: "Courses"
+        }
+    ], [
+        {
+            link: "https://flexboxfroggy.com/",
+            title: "Flexbox Froggy"
+        },
+        {
+            link: "ponder/flexbox/flexbox.html",
+            title: "Flexbox Exercise"
+        }
+    ], [
+        {
+            link: "ponder/hikes/hikes.html",
+            title: "Sorting Activities"
+        }
     ]
 ]
 
 const mainSectionContainer = document.querySelector(".main-container");
 let weekIndex = 1;
 
-ponders.forEach((ponderWeek) => {
+// This creates the "div" elements
+ponders.forEach((ponderWeek, index, arr) => {
     let weekContainer = document.createElement("section");
 
     weekContainer.className = "week-containers ponder-container";
@@ -57,19 +80,23 @@ ponders.forEach((ponderWeek) => {
     title.textContent = `Week ${weekIndex} Ponder`;
     weekContainer.appendChild(title);
 
-    ponderWeek.forEach((ponder) => {
-        let ponderContainer = document.createElement("div");
-        ponderContainer.className = "main-elements-container"
+    let ponderContainer = document.createElement("div");
+    ponderContainer.className = "main-elements-container ponder-element-container"
 
+    // This creates the "a" elements
+    ponderWeek.forEach((ponder) => {
         let linkElement = document.createElement("a");
         linkElement.href = ponder.link;
         linkElement.textContent = ponder.title;
 
         ponderContainer.appendChild(linkElement);
-        weekContainer.appendChild(ponderContainer);
+        ponderContainer.appendChild(document.createElement("br"));
     });
-    let hr = document.createElement("hr");
-    weekContainer.appendChild(hr);
+    weekContainer.appendChild(ponderContainer);
+
+    if (index !== arr.length - 1) {
+        weekContainer.appendChild(document.createElement("hr"));
+    }
 
     mainSectionContainer.appendChild(weekContainer);
     weekIndex++;

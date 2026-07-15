@@ -11,6 +11,7 @@ body h1 {
 .section-container {
     display: flex;
     flex-flow: row nowrap;
+    justify-self: center;
 }
 
 .main-container {
@@ -29,12 +30,18 @@ body h1 {
 .ponder-container {
     display: flex;
     flex-flow: column wrap;
-    gap: 10px;
+    gap: 3px;
 }
 
 .prove-container {
     display: flex;
     flex-flow: column nowrap;
+}
+
+.ponder-element-container {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 10px;
 }
 
 .main-elements-container {
@@ -47,8 +54,12 @@ body h1 {
     color: white;
     border-radius: 20px;
     padding: 7px;
-    margin: 10px 0 5px 0;
+    margin: 1px 0 1px 0;
     width: max-content;
+}
+
+.prove-container a {
+    margin-top: 7px;
 }
 
 .main-elements-container a:hover {
