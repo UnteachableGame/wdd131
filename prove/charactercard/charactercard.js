@@ -7,7 +7,11 @@ cards = {
         {level: 5, health: 100}
     ],
     attacked: function () {
-        this.sections[0].health -= 20;
+        if (this.sections[0].health > 1) {
+            this.sections[0].health -= 20;
+        } else {
+            alert("Character Died")
+        }
         renderSections();
     },
     levelUp: function () {
