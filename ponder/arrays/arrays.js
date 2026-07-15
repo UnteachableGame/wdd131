@@ -144,7 +144,7 @@ students.forEach((student) => {
     name.className = "format";
 
     let span1 = document.createElement("span");
-    span1.textContent = student.first;
+    span1.textContent = student.first + " ";
     name.appendChild(span1);
 
     let span2 = document.createElement("span");
