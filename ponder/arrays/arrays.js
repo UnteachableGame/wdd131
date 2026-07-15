@@ -142,10 +142,17 @@ students.forEach((student) => {
     let name = document.createElement("div");
 
     name.className = "format";
-    name.innerHTML = `
-        <span>${student.first}</span>
-        <span>${student.last}</span>
-        <hr>
-    `;
+
+    let span1 = document.createElement("span");
+    span1.textContent = student.first;
+    name.appendChild(span1);
+
+    let span2 = document.createElement("span");
+    span2.textContent = student.last;
+    name.appendChild(span2);
+
+    let hr = document.createElement("hr");
+    name.appendChild(hr);
+
     studentContainer.appendChild(name);
 })
