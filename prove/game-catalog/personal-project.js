@@ -97,6 +97,8 @@ const games = [
     }
 ];
 
+//
+
 // Renders all the games dynamically
 const gamesContainer = document.querySelector(".games-container");
 
