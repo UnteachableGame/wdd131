@@ -51,8 +51,8 @@ const games = [
         imgSrc: "images/apexLegends.jpeg",
         imgAlt: "Apex Legends Game Header",
         title: "Apex Legends",
-        platforms: ["Xbox", "PlayStation", "PC", "Mobile"], // need
-        description: "",
+        platforms: ["Xbox", "PlayStation", "PC", "Mobile"],
+        description: "A fast-paced, free-to-play battle royale where unique characters with powerful abilities team up to compete in the Apex Games.",
         score: 4
     },
     {
@@ -60,7 +60,7 @@ const games = [
         imgAlt: "Destiny 2 Game Header",
         title: "Destiny 2",
         platforms: ["Xbox", "PlayStation", "PC", "Mobile"],
-        description: "",
+        description: "An action MMO featuring an evolving story, cooperative strikes, competitive multiplayer, and intense raid encounters as Guardians defending humanity.",
         score: 4
     },
     {
@@ -68,7 +68,7 @@ const games = [
         imgAlt: "Overwatch Game Header",
         title: "Overwatch",
         platforms: ["Xbox", "PlayStation", "PC", "Mobile"],
-        description: "",
+        description: "A team-based hero shooter set in an optimistic future where players select from a diverse roster of tanks, damage, and support heroes.",
         score: 4
     },
     {
@@ -76,7 +76,7 @@ const games = [
         imgAlt: "Valorant Game Header",
         title: "Valorant",
         platforms: ["Xbox", "PlayStation", "PC", "Mobile"],
-        description: "",
+        description: "A 5v5 character-based tactical shooter blending precise gunplay with unique agent abilities in high-stakes round-based combat.",
         score: 4
     },
     {
@@ -84,7 +84,7 @@ const games = [
         imgAlt: "Legend of Zelda: Echos of Wisdom Game Header",
         title: "Legend of Zelda: Echos of Wisdom",
         platforms: ["Xbox", "PlayStation", "PC", "Mobile"],
-        description: "",
+        description: "A top-down adventure where Princess Zelda takes center stage, using the Tri Rod to create replicas of objects and monsters to solve puzzles and restore Hyrule.",
         score: 4
     },
     {
@@ -92,7 +92,7 @@ const games = [
         imgAlt: "Fortnite Game Header",
         title: "Fortnite",
         platforms: ["Xbox", "PlayStation", "PC", "Mobile"],
-        description: "",
+        description: "A massive online sandbox and battle royale title featuring fast-paced building mechanics, constant seasonal events, and creative game modes.",
         score: 4
     }
 ];
