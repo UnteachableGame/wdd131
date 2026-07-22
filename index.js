@@ -24,7 +24,7 @@ ponders = [
             title: "Responsive Menu pt.2"
         },
         {
-            link: "ponder/modals/modals.html",
+            link: "ponder/modals/modal.html",
             title: "Modals"
         }
     ], [

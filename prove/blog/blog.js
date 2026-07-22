@@ -40,8 +40,6 @@ const articles = [
     }
 ];
 
-
-
 const booksContainer = document.querySelector("#books-container");
 
 articles.forEach(function (item ) {

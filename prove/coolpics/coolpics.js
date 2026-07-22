@@ -28,6 +28,7 @@ modal.addEventListener('click', (event) => {
     }
 });
 
+// This is the open and close the menu nav
 menuBtn.addEventListener("click", () => {
     navMenu.classList.toggle("hide");
 });
