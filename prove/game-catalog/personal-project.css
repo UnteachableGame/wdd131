@@ -1,6 +1,11 @@
 @font-face {
-    font-family: GoodTime;
+    font-family: "GoodTime";
     src: url("fonts/GOOD_TIME.otf");
+}
+
+@font-face {
+    font-family: "Gameplay";
+    src: url("fonts/Gameplay.ttf");
 }
 
 * {
@@ -45,12 +50,13 @@ nav ul {
 }
 
 nav ul li a {
-    font-family: GoodTime serif;
+    font-family: "Gameplay", serif;
     text-decoration: none;
     color: #4a73b5;
     background-color: white;
     border-radius: 15px;
-    font-weight: bold;
+    font-size: 15px;
+    /*font-weight: bold;*/
     padding: 5px 0 5px 0;
 }
 
@@ -134,7 +140,7 @@ main {
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
-    align-items: center;
+    justify-content: center;
 }
 
 .game-container {
@@ -146,7 +152,6 @@ main {
     flex-flow: nowrap column;
     border-radius: 10px;
     background-color: white;
-    justify-self: center;
 }
 
 .game-container img {
@@ -156,9 +161,10 @@ main {
 }
 
 .game-container h2 {
-    font-family: GoodTime serif;
+    font-family: "Gameplay", serif;
     margin: 5px 0;
     text-align: center;
+    font-size: 15px;
 }
 
 .game-container p {
@@ -174,6 +180,7 @@ main {
     border: none;
     height: 40px;
     margin: 7px 2px 0 2px;
+    font-family: "Gameplay", serif;
 }
 
 .game-container button:hover {
@@ -242,7 +249,7 @@ dialog {
 
 /*----- Footer -----*/
 footer {
-    background-color: #6c93c6;
+    background-color: #4a73b5;
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
@@ -292,6 +299,9 @@ footer p {
 
     /*----- Main -----*/
     .games-container {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }

@@ -11,11 +11,11 @@
 <body>
 <header>
 	<a class="main-a" href="personal-project.html"><img class="main-logo" src="images/logo-transparent-512.png" alt="Main Logo"></a>
-	<search class="search-container">
-		<form action="" class="search-form">
-			<input type="search" class="search-input" aria-label="Search Games" placeholder="Find a game">
-			<button type="submit" class="search-submit" aria-label="Search submit">
-				<svg class="search-svg" viewBox="0 0 24 24">
+	<search class="search-container" role="search">
+		<form action="#" class="search-form" role="search">
+			<input type="search" id="game-search" class="search-input" aria-label="Search video games" placeholder="Find a game">
+			<button type="submit" class="search-submit" aria-label="Submit search">
+				<svg class="search-svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 					<circle cx="11" cy="11" r="8"></circle>
 					<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
 				</svg>
@@ -31,12 +31,12 @@
 </header>
 <main>
 	<section class="games-container">
-		<dialog>
-			<button class="close-viewer">X</button>
+		<dialog aria-labelledby="modal-game-title">
+			<button class="close-viewer" aria-label="Close details modal">X</button>
 			<div class="modal-content">
-				<img src="" alt="">
+				<img src="" alt="" id="modal-game-img">
 				<div class="modal-text">
-					<h2 class="gameTitle"></h2>
+					<h2 class="gameTitle" id="modal-game-title"></h2>
 					<p class="gamePlatforms"></p>
 					<p class="gameDesc"></p>
 					<p class="gameScore"></p>
@@ -48,9 +48,9 @@
 <footer>
 	<p>Michael Hoffman</p>
 	<div class="social-container">
-		<a href="https://www.instagram.com/"><img src="images/instagram_icon.svg" alt="Instagram"></a>
-		<a href="https://www.youtube.com/"><img src="images/youtube_icon.svg" alt="YouTube"></a>
-		<a href="https://www.facebook.com/"><img src="images/facebook_icon.svg" alt="Facebook"></a>
+		<a href="https://www.instagram.com/" aria-label="Visit our Instagram page"><img src="images/instagram_icon.svg" alt="" aria-hidden="true"></a>
+		<a href="https://www.youtube.com/" aria-label="Visit our YouTube channel"><img src="images/youtube_icon.svg" alt="" aria-hidden="true"></a>
+		<a href="https://www.facebook.com/" aria-label="Visit our Facebook page"><img src="images/facebook_icon.svg" alt="" aria-hidden="true"></a>
 	</div>
 </footer>
 </body>

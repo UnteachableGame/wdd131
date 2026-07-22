@@ -1,4 +1,4 @@
-games = [
+const games = [
     {
         imgSrc: "images/minecraft.png",
         imgAlt: "Minecraft Game Header",
@@ -125,6 +125,7 @@ function renderGames(gameArray) {
         const buttonDetails = document.createElement("button");
         buttonDetails.className = "btn-details";
         buttonDetails.textContent = "View Details";
+        buttonDetails.setAttribute("aria-label", `View details for ${game.title}`);
         gameContainer.appendChild(buttonDetails);
 
         gamesContainer.appendChild(gameContainer);
@@ -190,7 +191,7 @@ const searchInput = document.querySelector(".search-input");
 const searchSubmit = document.querySelector(".search-form");
 
 // This is a click event listener function when the submit button is clicked.
-searchSubmit.addEventListener("click", function (e) {
+searchSubmit.addEventListener("submit", function (e) {
     e.preventDefault();
 
     // This takes the input element and gets the input value with 'element.value'.
