@@ -10,34 +10,49 @@
 <body>
 	<main>
 		<div class="main-container">
-			<h1>Event Ticket</h1>
-			<form action="/ticket" method="post" class="form-container">
-				<div class="fname">
+			<h1 class="textA">Event Ticket</h1>
+			<form action="/ticket" method="post" class="form-container" novalidate>
+				<div class="fname textA">
 					<label for="fname2">First Name</label><br>
-					<input type="text" id="fname2" class="input-box" name="fname"><br>
+					<input required type="text" id="fname2" class="input-box fname-input" name="fname"><br>
 				</div>
-				<div class="lname">
+				<div class="lname textA">
 					<label for="lname2">Last Name</label><br>
-					<input type="text" id="lname2" class="input-box" name="lname"><br>
+					<input required type="text" id="lname2" class="input-box lname-input" name="lname"><br>
 				</div>
-				<div class="email">
+				<div class="email textA">
 					<label for="email2">Email</label><br>
-					<input type="email" id="email2" name="email"><br>
+					<input type="email" id="email2" class="input-box" name="email"><br>
 				</div>
-				<div class="type">
+				<div class="type textA">
 					<label for="type2">Type</label><br>
-					<select name="type" id="type2" class="input-box">
+					<select name="type" id="type2" class="input-box type-input">
 						<option value="chooseOne">Choose one</option>
 						<option value="student">Student</option>
 						<option value="guest">Guest</option>
 					</select><br>
 				</div>
-				<div class="date">
+				<div class="date textA">
 					<label for="date2">Event Date</label><br>
-					<input type="date" id="date2" class="input-box" name="date"><br>
+					<input required type="date" id="date2" class="input-box date-input" name="date"><br>
+				</div>
+				<div id="idId" class="hidden">
+					<label for="id">Student I#</label>
+					<input type="text" id="id" name="studentId" maxlength="9" minlength="9" pattern="[0-9]{9}" class="input-box id-input">
+				</div>
+				<div id="accessCode" class="hidden">
+					<label for="access">Access Code</label>
+					<input type="text" id="access" name="accessCode" class="input-box id-input">
 				</div>
 				<input type="submit" id="submit" class="submit" value="Create Ticket">
 			</form>
+			<p class="error-code hidden">Error</p>
+			<div class="submission-results hidden">
+				<h2>Ticket Created</h2>
+				<p class="name-output"></p>
+				<p class="type-output"></p>
+				<p class="date-output"></p>
+			</div>
 		</div>
 	</main>
 </body>
